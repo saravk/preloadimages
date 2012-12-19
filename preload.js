@@ -1,4 +1,3 @@
-
   (function( $ ){
     $.fn.preloadimages = function(options) {
       if(!this.plOptions) {
@@ -19,7 +18,7 @@
            i += 1;
            if (i >= this.plOptions.batchnum) {
               //Randomize the time between 1 to 1000ms
-              this.preLoadTimer = setTimeout($.proxy(this.plJob, this), Math.floor(Math.random()*1000+1));
+              this.preLoadTimer = setTimeout($.proxy(this.plJob, this), Math.floor(Math.random()*1000+100));
               return;
            }
            item = this.sourceArray.shift();
@@ -36,7 +35,7 @@
         this.sourceArray = this.sourceArray.concat(images);
         if (!this.preLoadTimer) {
           //Randomize the time between 1 to 1000ms
-          this.preLoadTimer = setTimeout($.proxy(this.plJob, this), Math.floor(Math.random()*1000+1));
+          this.preLoadTimer = setTimeout($.proxy(this.plJob, this), Math.floor(Math.random()*1000+100));
         }
       };
 
@@ -45,6 +44,6 @@
       this.sourceArray = this.map(function(){return $(this).attr(attrname);}).get();
 
       //Randomize the time between 1 to 1000ms
-      this.preLoadTimer = setTimeout($.proxy(this.plJob, this), Math.floor(Math.random()*1000+1));
+      this.preLoadTimer = setTimeout($.proxy(this.plJob, this), Math.floor(Math.random()*1000+100));
     };
   })( jQuery );
