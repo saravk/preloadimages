@@ -14,7 +14,9 @@
         i = 0;
         item = this.sourceArray.shift();
         while(item != undefined) {
-           $('<img/>')[0].src = item;
+           $('<img />').attr('src', item).load(function(){
+             $('body').append( $(this).height('5px').width('5px'));
+           });
            i += 1;
            if (i >= this.plOptions.batchnum) {
               //Randomize the time between 1 to 1000ms
