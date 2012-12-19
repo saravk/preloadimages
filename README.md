@@ -40,18 +40,15 @@ The plugin can be called with jQuery in different ways.
 
     var handle = $('selector').preloadimages();
     
-Use `selector` to find all the elements containing the URLs for the images to preloed (e.g "div[data-image]"). The plugin will
-preload the images in batches of '10'. 
+Use `selector` to find all the elements containing the URLs for the images to preloed (e.g "div[data-image]"). 
 
 ### Options
 
-You can change the 'selector', 'attribute name' (where the URLs are specified) and the batch number while initializing the 
-plugin. 
+You can change the 'selector' and 'attribute name' (where the URLs are specified) while initializing the plugin. 
 
     var handle = $('.selector).preloadimages({
                                   selector: "div[data-image]",
                                   attrname: 'data-image',
-                                  batchnum: 10
                                 });
 
 Preloading Images after a AJAX load
