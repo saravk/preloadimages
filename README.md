@@ -40,7 +40,7 @@ The plugin can be called with jQuery in different ways.
 
     var handle = $('selector').preloadimages();
     
-Use `selector` to find all the elements containing the URLs for the images to preloed (e.g "img[src]"). The plugin will
+Use `selector` to find all the elements containing the URLs for the images to preloed (e.g "div[data-image]"). The plugin will
 preload the images in batches of '10'. 
 
 ### Options
